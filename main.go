@@ -11,11 +11,9 @@ func (m floatMap) output() {
 func main() {
 	userNames := make([]string, 2, 3)
 	userNames[0] = "Julia"
-	userNames[1] = "Mary"
-	// userNames = append(userNames, "Max")
-	// userNames = append(userNames, "Leo")
-	// userNames = append(userNames, "Manuel")
-	// userNames = append(userNames, "Veronica")
+
+	userNames = append(userNames, "Max")
+	userNames = append(userNames, "Manuel")
 	//fmt.Println(userNames)
 
 	//courseRating := make(map[string]float64, 3)
@@ -24,7 +22,17 @@ func main() {
 	courseRating["React"] = 4.8
 	courseRating["Angular"] = 5.2
 
-	courseRating.output()
+	//courseRating.output()
 
 	//fmt.Println(courseRating)
+
+	for index, value := range userNames {
+		fmt.Println("Index:", index)
+		fmt.Println("Value:", value)
+	}
+
+	for key, value := range courseRating {
+		fmt.Println(key)
+		fmt.Println(value)
+	}
 }
